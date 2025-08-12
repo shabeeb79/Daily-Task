@@ -42,16 +42,15 @@ function sum(a) {
   let total = a;
 
   function inner(b) {
-    // console.log(b);
+   
     if (b !== undefined) {
       total += b;
       return inner;
     }
-
         return total;
     
   }
- return inner;
+    return inner;
 }
 
-console.log(sum(10)(20)(30)(88)()); // 60
+console.log(sum(10)(20)(30)(88)()); 
