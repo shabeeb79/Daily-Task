@@ -3,12 +3,12 @@
  let cachee = [];
 function squrenum(num){
    let number = num;
-    if(number in cache){
-        console.log(number);
+    if(cachee[number]){
+        // console.log(number);
         
         console.log("cache",cache[number]);//5
         
-        return cache[number]
+        // return cache[number]
     }
     let result = number*number;
      console.log("result",result);
