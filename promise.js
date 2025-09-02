@@ -58,3 +58,63 @@
 // })
 // .catch(()=>{
 //   console.log("error")})
+
+
+function nn(){
+ return new Promise((resolve,reject)=>{ setTimeout(()=>{
+    if(val = false)
+    resolve("succsess full")
+    reject("error")
+},4000)
+})
+}
+
+function n(){
+ return new Promise((resolve,reject)=>{ setTimeout(()=>{
+    if(val = false)
+    resolve("succsess full")
+    reject("error")
+},4000)
+})
+ }
+
+function c(){
+ return new Promise((resolve,reject)=>{ setTimeout(()=>{
+    if(val = false)
+    resolve("succsess full")
+    reject("error")
+},4000)
+})
+}
+function b(){
+ return new Promise((resolve,reject)=>{ setTimeout(()=>{
+    if(val = false)
+    resolve("succsess full")
+    reject("error")
+},4000)
+})
+}
+function a(){
+ return new Promise((resolve,reject)=>{ setTimeout(()=>{
+    if(val = false)
+    resolve("succsess full")
+    reject("error34567890456789")
+},1000)
+})
+}
+// prom
+// .then((res)=>{
+//     console.log(res);
+// })
+// .catch((err)=>{
+//   console.log(err);
+  
+// });
+
+Promise.race([n(),nn(),c(),b(),a()]).then((res)=>{
+  console.log(res);
+  
+}).catch((res)=>{
+   console.log(res);
+   
+})

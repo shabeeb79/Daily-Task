@@ -33,5 +33,21 @@
     
 // });
 
+let x ="";
+function palindrom(str){
+    // str = str.toLowerCase();
+    str = Array.from(str)
+    console.log(str);
+    
+    if(str.length<=0){
+        return ;
+    }
 
+    palindrom (str.slice(1))+str[0]
+      if(str == x){
+        return true;  
+    }
+    
+}
 
+console.log(palindrom("malayalam"));

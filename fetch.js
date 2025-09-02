@@ -1,8 +1,8 @@
-// fetch("https://catfact.ninja/fact")
+// fetch("https://catfact.ninja/facttttt")
 // .then((res)=> res.json())
 // .then(txt=> console.log(txt))
-// .catch(()=>{
-//     console.log("api fail");
+// .catch((err)=>{
+//     throw new Error ("api fail",err);
     
 // });
 
@@ -26,16 +26,25 @@
 // .catch(res=> console.log(res)
 // );
 
-async function run() {
-    try{
-    let data = await fetch("https://jsonplaceholder.typicode.com/posts")
-    let post = await data.json()
-    console.log(post.slice(0,5));
-    }
-    catch(error){
-        console.log("it contain",error.console);
-        
-    }
-    
-}
-run()
+
+
+
+fetch("https://jsonplaceholder.typicode.com/posts")
+.then((data)=> data.json())
+.then((res)=>{ console.log(res)})
+
+// fetch('https://api.example.com/dataaa')
+//   .then(response => {
+//     if (!response) {
+//       throw new Error(`HTTP error! status: ${response.status}`);
+//     }
+//     return response.json();
+//   })
+//   .then(data => console.log(data))
+//   .catch(err => console.error('Error:', err));
+// fetch('https://wrongurl.example.com/data') // wrong URL
+//   .then(res => res.json())
+//   .then(data => console.log(data))
+//   .catch(error => {
+//     console.error('Something went wrong:', error);
+//   });

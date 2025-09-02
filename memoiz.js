@@ -51,22 +51,22 @@
 
 // //same
 
-// function memoizedFactorial() {
-//   const cache = {};
+function memoizedFactorial() {
+  const cache = {};
 
-//   return function factorial(n) {
-//     if (n in cache) {
-//       console.log("Fetching from cache:", n);
-//       return "cache"+cache[n];
-//     }
-//     console.log("Calculating result:", n);
-//     if (n === 0) return 1;
+  return function factorial(n) {
+    if (n in cache) {
+      console.log("Fetching from cache:", n);
+      return "cache"+cache[n];
+    }
+    console.log("Calculating result:", n);
+    if (n === 0) return 1;
 
-//     const result = n * factorial(n - 1);
-//     cache[n] = result;
-//     return result;
-//   };
-// }
+    const result = n * factorial(n - 1);
+    cache[n] = result;
+    return result;
+  };
+}
 
 // const factorial = memoizedFactorial();
 
